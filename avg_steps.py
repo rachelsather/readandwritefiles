@@ -7,43 +7,79 @@ next(csvfile)
 outfile = open('avg_steps.csv', 'w')
 
 for record in csvfile:
-    i = 0
+    jan = 0
+    jan_counter = 0
+    feb = 0
+    feb_counter = 0
+    mar = 0
+    mar_counter = 0
+    apr = 0
+    apr_counter = 0
+    may = 0
+    may_counter = 0
+    jun = 0
+    jun_counter = 0
+    jul = 0
+    jul_counter = 0
+    aug = 0
+    aug_counter = 0
+    sep = 0
+    sep_counter = 0
+    octo = 0
+    octo_counter = 0
+    nov = 0 
+    nov_counter = 0
+    dec = 0
+    dec_counter = 0
+
     if record[0] == 1:
-        addition = sum(record[1])
-        i += 1
-        outfile.write('January, ' + addition/i)
-    elif record[0]==2:
-        i += 1
-        outfile.write('February, ' + sum(record[1])/i)
+        jan += record[1]
+        jan_counter += 1
+    elif record[0] == 2:
+        feb += record[1]
+        feb_counter += 1
     elif record[0] == 3:
-        i += 1
-        outfile.write('March, ' + sum(record[1])/i)
+        mar += record[1]
+        mar_counter += 1
     elif record[0] == 4:
-        i += 1
-        outfile.write('April, ' + sum(record[1])/i)
+        apr += record[1]
+        apr_counter += 1
     elif record[0] == 5:
-        i += 1
-        outfile.write('May, ' + sum(record[1])/i)
+        may += record[1]
+        may_counter += 1
     elif record[0] == 6:
-        i += 1
-        outfile.write('June, ' + sum(record[1])/i)
+        jun += record[1]
+        jun_counter += 1
     elif record[0] == 7:
-        i += 1
-        outfile.write('July, ' + sum(record[1])/i)
+        jul += record[1]
+        jul_counter += 1
     elif record[0] == 8:
-        i += 1
-        outfile.write('August, ' + sum(record[1])/i)
+        aug += record[1]
+        aug_counter += 1
     elif record[0] == 9:
-        i += 1
-        outfile.write('September, ' + sum(record[1])/i)
+       sep += record[1]
+       sep_counter += 1
     elif record[0] == 10:
-        i += 1
-        outfile.write('October, ' + sum(record[1])/i)
+        octo += record[1]
+        octo_counter += 1
     elif record[0] == 11:
-        i += 1
-        outfile.write('November, ' + sum(record[1])/i)
+        nov += record[1]
+        nov_counter += 1
     elif record[0] == 12:
-        i += 1
-        outfile.write('December, ' + sum(record[1])/i)
+        dec += record[1]
+        dec_counter += 1
+
+outfile.write('January, ' + jan/jan_counter)
+outfile.write('February, ' + feb/feb_counter)
+outfile.write('March, ' + mar/mar_counter)
+outfile.write('April, ' + apr/apr_counter)
+outfile.write('May, ' + may/may_counter)
+outfile.write('June, ' +jun/jun_counter)
+outfile.write('July, ' + jul/jul_counter)
+outfile.write('August, ' + aug/aug_counter)
+outfile.write('September, ' + sep/sep_counter)
+outfile.write('October, ' + octo/octo_counter)
+outfile.write('November, ' + nov/nov_counter)
+outfile.write('December, ' + dec/dec_counter)
 
 outfile.close
